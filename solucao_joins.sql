@@ -48,6 +48,7 @@ SELECT p.nome_projeto, f.nome_funcionario
 FROM projeto p
 RIGHT JOIN funcionario f ON p.codigo_funcionario = f.codigo_funcionario;
 
+-- FULL JOIN
 -- 10) Liste todos os funcionários e o nome dos projetos em que trabalham, bem como todos os projetos e o nome dos funcionários associados a eles.
 SELECT f1.nome_funcionario, p1.nome_projeto
 FROM funcionario f1
