@@ -43,7 +43,7 @@ SELECT d.nome_depto, f.nome_funcionario
 FROM departamento d
 RIGHT JOIN funcionario f ON d.sigla_depto = f.sigla_depto;
 
--- 9)  Liste todos os projetos e o nome dos funcionários que estão associados a eles, incluindo os projetos sem funcionários
+-- 9) Liste todos os projetos e o nome dos funcionários que estão associados a eles, incluindo os projetos sem funcionários
 SELECT p.nome_projeto, f.nome_funcionario
 FROM projeto p
 RIGHT JOIN funcionario f ON p.codigo_funcionario = f.codigo_funcionario;
@@ -58,7 +58,7 @@ SELECT f2.nome_funcionario, p2.nome_projeto
 FROM funcionario f2
 RIGHT JOIN projeto p2 ON f2.codigo_funcionario = p2.codigo_funcionario;
 
--- 11 )  Liste todos os departamentos e a quantidade de funcionários que eles têm, incluindo os departamentos sem funcionários, bem como todos os funcionários e o nome dos departamentos em que trabalham, incluindo aqueles que não têm departamentos atribuídos.
+-- 11) Liste todos os departamentos e a quantidade de funcionários que eles têm, incluindo os departamentos sem funcionários, bem como todos os funcionários e o nome dos departamentos em que trabalham, incluindo aqueles que não têm departamentos atribuídos.
 SELECT d1.nome_depto, COUNT(f1.codigo_funcionario) AS qtd_funcionarios
 FROM departamento d1
 LEFT JOIN funcionario f1 ON d1.sigla_depto = f1.sigla_depto
